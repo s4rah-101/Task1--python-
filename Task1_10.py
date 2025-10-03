@@ -12,7 +12,6 @@ def encode_string(s):
         if s[i] == s[i-1]:
             count += 1  # Same character as before, increase the count
         else:
-            # Different character encountered
             # Append previous character and its count to the encoded string
             encoded += s[i-1] + str(count)
             count = 1  # Reset count for the new character
@@ -20,15 +19,8 @@ def encode_string(s):
     # After the loop ends, we need to add the last run of characters
     encoded += s[-1] + str(count)
 
-    return encoded  # Return the fully encoded string
+    return encoded  
 
-
-# --------------------------
-# Main program starts here
-# --------------------------
-
-# Accept input from the user
 s = input("Enter a string: ")
-
-# Call the function and print the encoded string
 print("Encoded:", encode_string(s))
+
